@@ -402,6 +402,7 @@ body {
 .selected-info {
   flex: 1;
   font-size: 13px;
+  min-width: 0; /* allow text to truncate/shrink inside flex container */
 }
 
 .selected-item .small {
@@ -416,6 +417,9 @@ body {
   line-height: 1;
   cursor: pointer;
   color: #999;
+  margin-left: auto; /* push button to the far right inside the card */
+  flex: 0 0 auto; /* prevent the button from shrinking/growing unexpectedly */
+  padding: 4px 4px;
 }
 
 .remove-selected:hover {
